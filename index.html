@@ -6,11 +6,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
 </head>
+<header>
+    <h2 class="font-weight-bold text-center">To-Do-List</h2>
+</header>
 
 <body>
-
+    <div class="col-md-6">
+        <label for="inputName" class="form-label">Name</label>
+        <br>
+        <input type="name" class="form-control" id="inputName">
+    </div>
+    <br>
+    <div class="col-md-12">
+        <label for="inputName" class="form-label">Description</label>
+        <br>
+        <input type="name" class="form-control" id="inputName">
+        <br>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Assigned To</label>
+                <input type="text" class="form-control" id="inputCity">
+                <br>
+            </div>
+            <div class="col-md-6">
+                <label for="inputZip" class="form-label">Due Date</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Add Task</button>
+        </form>
 </body>
 
 </html>
