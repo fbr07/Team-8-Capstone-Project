@@ -1,11 +1,49 @@
 * {
     box-sizing: border-box;
 }
+h1 {
+    text-align: center;
+    padding: 60px;
 
-body {
-padding: 120px;
+}
+
+.task-information {
+    display: flex;
+	justify-content: center;
+	width: 65%;
+	margin: auto;
+	flex-direction: column;
 }
 
 div .d-flex {
-display: flex;
+    display: flex;
+}
+
+.btn-success {
+    background-color: #7EBE81 !important;
+    border-color:#7EBE81 !important;
+}
+
+.btn-success:hover {
+    background-color: #72BC75 !important;
+}
+
+.btn-outline-success {
+    color: #7EBE81 !important;
+    border-color:#7EBE81 !important;
+}
+
+.btn-outline-success:hover {
+    background-color: #7EBE81 !important;
+    color: #fff !important;
+}
+
+.btn-outline-danger {
+    color: #FF5353 !important;
+    border-color: #FF5353 !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: #FF5353 !important;
+    color: #fff !important;
 }
