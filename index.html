@@ -16,9 +16,10 @@
 <body>
     <!--Title-->
     <header class="center-title">
-        <h1>To-Do List</h1>
+        <h1>✨ To-Do List ✨</h1>
     </header>
 
+    <!--Input Fields-->
     <form action="/" method="GET">
     <div class="task-information">
         <div class="col-md-6">
@@ -33,29 +34,73 @@
             <input type="description" class="form-control" id='description' required>
         </div>
         <br>
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="assigned" class="form-label">Assigned To</label>
-                <input type="assigned" class="form-control" id='assigned' required>
-                <br>
-            </div>
-            <div class="col-md-6">
-                <label for="date" class="form-label">Due Date</label>
-                <input type="date" class="form-control" id='date' value="mm/dd/yyyy" required>
-            </div>
-            <button type="submit" class="btn btn-success btn-lg btn-block">Add Task</button>
-        </form>
-        </form>
+        <div class="col-md-6">
+            <label for="assigned" class="form-label">Assigned To</label>
+            <input type="assigned" class="form-control" id='assigned' required>
+            <br>
+        </div>
+        <div class="col-md-6">
+            <label for="date" class="form-label">Due Date</label>
+            <input type="date" class="form-control" id='date' value="mm/dd/yyyy" required>
+        </div>
         <br>
-        <br>
-        <header>
-            <h3 class="font-weight-bold text-center">My Tasks</h3>
-        </header>
-        <br>
-        <br>
+    </form>
 
-        <!--Task Cards-->
-        <div class="row row-cols-lg-3 g-lg-3">
+    
+
+    <!--Button-->
+   <button type="submit" class="btn btn-success btn-lg btn-block">Add Task</button>
+    </form>
+    <br>
+    <br>
+    <header>
+        <h3 class="font-weight-bold text-center">My Tasks 📝</h3>
+    </header>
+    <br>
+    <br>
+
+    <!--Task Cards-->
+    <div class="row row-cols-lg-3 g-lg-3">
+        <div class="col-6">
+        <div class="card p-3">
+            <div class="card-body">
+                <h5 class="card-title font-weight-bold">Talk about project</h5>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6>Assigned To: My Team</h6>
+                        </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6>Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+                <div class="card p-3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Talk about project</h5>
+                        <form class="row g-4">
+                            <div class="col-sm-6 text-muted">
+                                <h6>Assigned To: My Team</h6>
+                            </div>
+                            <div class="col-sm-6 text-muted" style="text-align: right;">
+                                <h6>Due Date: 12/16/2022</h6>
+                            </div>
+                        </form>
+                        <p class="card-text">This will be a fun project to do!!</p>
+                        <div class="col-md-10">
+                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-6">
                 <div class="card p-3">
                     <div class="card-body">
@@ -70,7 +115,7 @@
                         </form>
                         <p class="card-text">This will be a fun project to do!!</p>
                         <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-lg">Mark As Done</button>
+                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
                             <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
                         </div>
                     </div>
@@ -90,8 +135,8 @@
                         </form>
                         <p class="card-text">This will be a fun project to do!!</p>
                         <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-lg">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
+                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -110,48 +155,8 @@
                         </form>
                         <p class="card-text">This will be a fun project to do!!</p>
                         <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-lg">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <h5 class="card-title font-weight-bold">Talk about project</h5>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6>Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6>Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-lg">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <h5 class="card-title font-weight-bold">Talk about project</h5>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6>Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6>Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-lg">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
+                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
                         </div>
                     </div>
                 </div>
