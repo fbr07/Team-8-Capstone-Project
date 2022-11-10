@@ -1,3 +1,6 @@
+/*const TaskManager = new task
+console.log(`${TaskManager.task}`)*/
+
 const name = document.getElementById('inputName')
 const description = document.getElementById('description')
 const assigned = document.getElementById('assigned')
@@ -18,3 +21,5 @@ form.addEventListener('submit', (e) => {
         errorElement.innerText = messages.join(', ')
     }
 })
+
+
