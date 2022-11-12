@@ -20,37 +20,47 @@
     </header>
 
     <!--Input Fields-->
-    <form action="/" method="GET">
-    <div class="task-information">
-        <div class="col-md-6">
-            <label for="name" class="form-label">Name</label>
-            <br>
-            <input type="inputName" class="form-control" id='inputName' required>
-        </div>
-        <br>
-        <div class="col-md-12">
-            <label for="description" class="form-label">Description</label>
-            <br>
-            <input type="description" class="form-control" id='description' required>
-        </div>
-        <br>
-        <div class="col-md-6">
-            <label for="assigned" class="form-label">Assigned To</label>
-            <input type="assigned" class="form-control" id='assigned' required>
-            <br>
-        </div>
-        <div class="col-md-6">
-            <label for="date" class="form-label">Due Date</label>
-            <input type="date" class="form-control" id='date' value="mm/dd/yyyy" required>
-        </div>
-        <br>
-    </form>
+    <form class="form" id="form">
+        <div class="task-information">
+            <div class="col-md-6">
+                <label for="names" class="form-label">Name</label>
+                <input type="inputName" class="form-control" id='names'>
 
-    
+                <i class="fas fa-check-circle"></i>
+			    <i class="fas fa-exclamation-circle"></i>
+                <small></small>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="description" class="form-label">Description</label>
+                <input for="description" class="form-control" id='description'>
 
-    <!--Button-->
-   <button type="submit" class="btn btn-success btn-lg btn-block">Add Task</button>
-    </form>
+                <i class="fas fa-check-circle"></i>
+			    <i class="fas fa-exclamation-circle"></i>
+                <small></small>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="assigned" class="form-label">Assigned To</label>
+                <input type="assigned" class="form-control" id='assigned'>
+
+                <i class="fas fa-check-circle"></i>
+			    <i class="fas fa-exclamation-circle"></i>
+                <small></small>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="date" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id='date' value="mm/dd/yyyy">
+
+                 <i class="fas fa-check-circle"></i>
+			    <i class="fas fa-exclamation-circle"></i>
+                <small></small>
+            </div>
+            <br>
+            <!--Button-->
+            <button type='submit' class="btn btn-success btn-lg btn-block" id='submit'>Add Task</button>
+        </form>
     <br>
     <br>
     <header>
@@ -61,153 +71,97 @@
 
     <!--Task Cards-->
     <div class="row row-cols-lg-3 g-lg-3">
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <form class="row g-4">
-                            <div class="col-sm-8">
-                                <h5>Talk about project</h5>
-                            </div>
-                            <div class="col-sm-4" style="text-align: right;">
-                                <div class="container">
-                                <div class="skills html">To Do</div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6 class="taskassign">Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6 class="duedate">Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Talk about project</h5>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6>Assigned To: My Team</h6>
+                        </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6>Due Date: 12/16/2022</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <form class="row g-4">
-                            <div class="col-sm-8">
-                                <h5>Talk about project</h5>
-                            </div>
-                            <div class="col-sm-4" style="text-align: right;">
-                                <div class="container">
-                                <div class="skills html">To Do</div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6 class="taskassign">Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6 class="duedate">Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+        </div>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Talk about project</h5>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6>Assigned To: My Team</h6>
                         </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6>Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <form class="row g-4">
-                            <div class="col-sm-8">
-                                <h5>Talk about project</h5>
-                            </div>
-                            <div class="col-sm-4" style="text-align: right;">
-                                <div class="container">
-                                <div class="skills html">To Do</div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6 class="taskassign">Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6 class="duedate">Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+        </div>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Talk about project</h5>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6>Assigned To: My Team</h6>
                         </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6>Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <form class="row g-4">
-                            <div class="col-sm-8">
-                                <h5>Talk about project</h5>
-                            </div>
-                            <div class="col-sm-4" style="text-align: right;">
-                                <div class="container">
-                                <div class="skills html">To Do</div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6 class="taskassign">Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6 class="duedate">Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+        </div>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Talk about project</h5>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6>Assigned To: My Team</h6>
                         </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6>Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <form class="row g-4">
-                            <div class="col-sm-8">
-                                <h5>Talk about project</h5>
-                            </div>
-                            <div class="col-sm-4" style="text-align: right;">
-                                <div class="container">
-                                <div class="skills html">To Do</div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6 class="taskassign">Assigned To: My Team</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6 class="duedate">Due Date: 12/16/2022</h6>
-                            </div>
-                        </form>
-
-                        <p class="card-text">This will be a fun project to do!!</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+        </div>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Talk about project</h5>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6>Assigned To: My Team</h6>
                         </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6>Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
                     </div>
                 </div>
             </div>
@@ -217,8 +171,14 @@
 
         </footer>
     </div>
-    <script src="taskManager.js"></script>
-    <script src="index.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+   
+    <script src="Assets/JS/taskManager.js"></script>
+    <script src="Assets/JS/index.js"></script>
+    
 </body>
 
 </html>
