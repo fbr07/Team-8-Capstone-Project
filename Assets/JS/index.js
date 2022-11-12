@@ -83,3 +83,8 @@ function checkInputs () {
     const formControl = input.parentElement;
     formControl.className='form-control success';
  }
+
+//  const TaskManager1 = new TaskManager();
+//  TaskManager1.name = 'Felipe';
+//  TaskManager1.description = 'Hello team, we got this';
+//  console.log(TaskManager1)
