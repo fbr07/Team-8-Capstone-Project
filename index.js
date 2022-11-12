@@ -1,25 +1,34 @@
 /*const TaskManager = new task
 console.log(`${TaskManager.task}`)*/
 
-const name = document.getElementById('inputName')
-const description = document.getElementById('description')
-const assigned = document.getElementById('assigned')
-const date = document.getElementById('date')
-const errorElement = document.getElementById('error')
+const Name = document.getElementById('inputName').value;
+const description = document.getElementById('description');
+const assigned = document.getElementById('assigned');
+const date = document.getElementById('date');
+const errorElement = document.getElementById('error');
+let messages = [];
 
 /* const validFormFieldInput = (data) => {
     document.getElementById("inputName") 
 } */
-form.addEventListener('submit', (e) => {
-    let messages = []
-    if (inputName.value === '' || inputName.value === null) {
-        messages.push('Name is required')
+function form () {
+  console.log('test')
+    if (Name === '' || null) {
+        alert('Name is required')
     }
+  // else if (description.value.length <= 5) {
+  //      alert('Description must be longer than 5 characters')
+ //   }
 
-    if (messages.length > 0) {
-        e.preventDefault()
-        errorElement.innerText = messages.join(', ')
-    }
-})
+  //  if (messages.length > 0) {
+//        e.preventDefault()
+    //    errorElement.innerText = messages.join(', ')
+   // }
+};
+/*$('description').alert(function() {
+    alert("The Form has been Submitted.");
+ });*/
+
+
 
 
