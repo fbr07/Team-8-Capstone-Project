@@ -19,17 +19,29 @@ class TaskManager {
     //     return this.id
     // }
 
+    addTask(names, description, assigned, date,) {
+        const newTask = {
+            names: names,
+            description: description,
+            assigned: assigned,
+            date: date,
+            id: this.currentId++,
+            status: 'TODO',
+        };
 
+        this.task.push(newTask);
 
-    // addTask(names, description, assigned, date, id) {
+    }
     //     this.task.push(names);
     //     this.task.push(description);
     //     this.task.push(assigned);
     //     this.task.push(date);
     //     this.task.push(id);
-  
+
     // }
-};
+}
+
+
 // console.log(TaskManager.date);
 
 

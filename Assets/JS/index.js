@@ -43,7 +43,7 @@ form.addEventListener('submit', (e) => {
     checkInputs();
 });
 
-function checkInputs () {
+function checkInputs() {
     // get the values from the inputs
     const namesValue = names.value;
     const descriptionValue = description.value;
@@ -55,13 +55,13 @@ function checkInputs () {
     } else {
         setSuccesFor(names);
     }
-    if(descriptionValue === '') {
+    if (descriptionValue === '') {
         setErrorFor(description, 'Description cannot be empty');
     } else {
         setSuccesFor(description);
     }
     if (assignedValue === '') {
-        setErrorFor(assigned,'Assigned To cannot be empty');
+        setErrorFor(assigned, 'Assigned To cannot be empty');
     } else {
         setSuccesFor(assigned);
     }
@@ -70,19 +70,23 @@ function checkInputs () {
     } else {
         setSuccesFor(date);
     }
- }
+}
 
- function setErrorFor(input, message) {
+function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
     formControl.className = 'form-control error';
     small.innerText = message;
- }
+}
 
- function setSuccesFor(input) {
+function setSuccesFor(input) {
     const formControl = input.parentElement;
-    formControl.className='form-control success';
- }
+    formControl.className = 'form-control success';
+}
+
+const taskManager = new TaskManager();
+console.log(taskManager.addTask('Team 8', 'Final Project',
+    'Assigned to Team 8', '12/15/2022'));
 
 //  const TaskManager1 = new TaskManager();
 //  TaskManager1.name = 'Felipe';
