@@ -1,12 +1,12 @@
 /*const TaskManager = new task
 console.log(`${TaskManager.task}`)*/
 
-/*const Name = document.getElementById('inputName').value;
+const Name = document.getElementById('inputName').value;
 const description = document.getElementById('description');
 const assigned = document.getElementById('assigned');
 const date = document.getElementById('date');
 const errorElement = document.getElementById('error');
-let messages = [];*/
+let messages = [];
 
 /* const validFormFieldInput = (data) => {
     document.getElementById("inputName") 
@@ -30,12 +30,17 @@ $('description').alert(function() {
 
 
 // Function Starts
-const form = document.getElementById('form');
-const names = document.getElementById('names');
-const description = document.getElementById('description');
-const assigned = document.getElementById('assigned');
-const date = document.getElementById('date');
-console.log("hello");
+/*const form = document.getElementById('form');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault() // prevents the form from autosubmitting 
+    const names = document.getElementById('names').value;
+    console.log('names');
+    const description = document.getElementById('description').value;
+    const assigned = document.getElementById('assigned').value;
+    const date = document.getElementById('date').value; 
+
+}) */
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -92,3 +97,6 @@ console.log(taskManager.addTask('Team 8', 'Final Project',
 //  TaskManager1.name = 'Felipe';
 //  TaskManager1.description = 'Hello team, we got this';
 //  console.log(TaskManager1)
+
+// Rough Draft Ideas on Task 5 Part 4 (Felipe)
+

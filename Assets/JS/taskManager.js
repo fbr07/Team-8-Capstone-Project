@@ -20,7 +20,7 @@ class TaskManager {
     // }
 
     addTask(names, description, assigned, date,) {
-        const newTask = {
+        let newTask = {
             names: names,
             description: description,
             assigned: assigned,
