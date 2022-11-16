@@ -1,46 +1,13 @@
 /*const TaskManager = new task
 console.log(`${TaskManager.task}`)*/
 
-const Name = document.getElementById('inputName').value;
+const Name = document.getElementById('inputName');
 const description = document.getElementById('description');
 const assigned = document.getElementById('assigned');
 const date = document.getElementById('date');
 const errorElement = document.getElementById('error');
 let messages = [];
 
-/* const validFormFieldInput = (data) => {
-    document.getElementById("inputName") 
-} 
-function form () {
-  console.log('test')
-    if (Name === '' || null) {
-        alert('Name is required')
-    }
-  // else if (description.value.length <= 5) {
-  //      alert('Description must be longer than 5 characters')
- //   }
-
-  //  if (messages.length > 0) {
-//        e.preventDefault()
-    //    errorElement.innerText = messages.join(', ')
-   // }
-$('description').alert(function() {
-    alert("The Form has been Submitted.");
- });*/
-
-
-// Function Starts
-/*const form = document.getElementById('form');
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault() // prevents the form from autosubmitting 
-    const names = document.getElementById('names').value;
-    console.log('names');
-    const description = document.getElementById('description').value;
-    const assigned = document.getElementById('assigned').value;
-    const date = document.getElementById('date').value; 
-
-}) */
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -90,8 +57,11 @@ function setSuccesFor(input) {
 }
 
 const taskManager = new TaskManager();
-console.log(taskManager.addTask('Team 8', 'Final Project',
-    'Assigned to Team 8', '12/15/2022'));
+taskManager.addTask('Team 8', 'Final Project',
+    'Assigned to Team 8', '12/15/2022');
+
+console.log(taskManager);
+
 
 //  const TaskManager1 = new TaskManager();
 //  TaskManager1.name = 'Felipe';
@@ -100,3 +70,34 @@ console.log(taskManager.addTask('Team 8', 'Final Project',
 
 // Rough Draft Ideas on Task 5 Part 4 (Felipe)
 
+/* const validFormFieldInput = (data) => {
+    document.getElementById("inputName") 
+} 
+function form () {
+  console.log('test')
+    if (Name === '' || null) {
+        alert('Name is required')
+    }
+  // else if (description.value.length <= 5) {
+  //      alert('Description must be longer than 5 characters')
+ //   }
+
+  //  if (messages.length > 0) {
+//        e.preventDefault()
+    //    errorElement.innerText = messages.join(', ')
+   // }
+$('description').alert(function() {
+    alert("The Form has been Submitted.");
+ });*/
+
+
+// Function Starts
+/*const form = document.getElementById('form');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault() // prevents the form from autosubmitting 
+    const names = document.getElementById('names').value;
+    console.log('names');
+    const description = document.getElementById('description').value;
+    const assigned = document.getElementById('assigned').value;
+    const date = document.getElementById('date').value; 
