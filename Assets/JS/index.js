@@ -1,5 +1,6 @@
 /*const TaskManager = new task
 console.log(`${TaskManager.task}`)*/
+const taskManager = new TaskManager(); // top
 
 const Name = document.getElementById('inputName');
 const description = document.getElementById('description');
@@ -42,6 +43,14 @@ function checkInputs() {
     } else {
         setSuccesFor(date);
     }
+    if (namesValue && descriptionValue && assignedValue && dateValue) {
+        taskManager.addTask(namesValue, descriptionValue, assignedValue, dateValue);
+    } console.log(taskManager);
+    names.value = '';
+    description.value = '';
+    assigned.value = '';
+    date.value = '';
+
 }
 
 function setErrorFor(input, message) {
@@ -56,9 +65,7 @@ function setSuccesFor(input) {
     formControl.className = 'form-control success';
 }
 
-const taskManager = new TaskManager();
-taskManager.addTask('Team 8', 'Final Project',
-    'Assigned to Team 8', '12/15/2022');
+
 
 console.log(taskManager);
 
@@ -71,8 +78,8 @@ console.log(taskManager);
 // Rough Draft Ideas on Task 5 Part 4 (Felipe)
 
 /* const validFormFieldInput = (data) => {
-    document.getElementById("inputName") 
-} 
+    document.getElementById("inputName")
+}
 function form () {
   console.log('test')
     if (Name === '' || null) {
@@ -100,4 +107,4 @@ form.addEventListener('submit', function (event) {
     console.log('names');
     const description = document.getElementById('description').value;
     const assigned = document.getElementById('assigned').value;
-    const date = document.getElementById('date').value; 
+    const date = document.getElementById('date').value;*/
