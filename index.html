@@ -58,6 +58,16 @@
                 <small></small>
             </div>
             <br>
+            <div class="form-group col-md-4">
+                <label for="status">State</label>
+                <select id="status" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>DONE</option>
+                  <option>TODO</option>
+                </select>
+              </div>
+              <br>
+
             <!--Button-->
             <button type='submit' class="btn btn-success btn-lg btn-block" id='submit'>Add Task</button>
         </form>
@@ -74,31 +84,19 @@
         <div class="col-6">
             <div class="card p-3">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Talk about project</h5>
-                    <form class="row g-4">
-                        <div class="col-sm-6 text-muted">
-                            <h6>Assigned To: My Team</h6>
-                        </div>
-                        <div class="col-sm-6 text-muted" style="text-align: right;">
-                            <h6>Due Date: 12/16/2022</h6>
-                        </div>
+                    <div class="col-md-10">
+                        <h5 class="card-title font-weight-bold" id="names">Talk about project</h5>
+                        <div class="skills html" id="status">DONE</div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card p-3">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Talk about project</h5>
                     <form class="row g-4">
                         <div class="col-sm-6 text-muted">
-                            <h6>Assigned To: My Team</h6>
+                            <h6 class="mutedfield" id="assigned">Assigned To: Me</h6>
                         </div>
                         <div class="col-sm-6 text-muted" style="text-align: right;">
-                            <h6>Due Date: 12/16/2022</h6>
+                            <h6 class="mutedfield" id="date">Due Date: 12/16/2022</h6>
                         </div>
                     </form>
-                    <p class="card-text">This will be a fun project to do!!</p>
+                    <p class="card-text" id="description">This will be a fun project to do!!</p>
                     <div class="col-md-10">
                         <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
                         <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
@@ -106,59 +104,23 @@
                 </div>
             </div>
         </div>
+        
         <div class="col-6">
             <div class="card p-3">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Talk about project</h5>
-                    <form class="row g-4">
-                        <div class="col-sm-6 text-muted">
-                            <h6>Assigned To: My Team</h6>
-                        </div>
-                        <div class="col-sm-6 text-muted" style="text-align: right;">
-                            <h6>Due Date: 12/16/2022</h6>
-                        </div>
-                    </form>
-                    <p class="card-text">This will be a fun project to do!!</p>
                     <div class="col-md-10">
-                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                        <button type="button" class="btn btn-outline-danger btn-lg">Delete</button>
+                        <h5 class="card-title font-weight-bold" id="names">Talk about project</h5>
+                        <div class="skills html" id="status">DONE</div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card p-3">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Talk about project</h5>
                     <form class="row g-4">
                         <div class="col-sm-6 text-muted">
-                            <h6>Assigned To: My Team</h6>
+                            <h6 class="mutedfield" id="assigned">Assigned To: Me</h6>
                         </div>
                         <div class="col-sm-6 text-muted" style="text-align: right;">
-                            <h6>Due Date: 12/16/2022</h6>
+                            <h6 class="mutedfield" id="date">Due Date: 12/16/2022</h6>
                         </div>
                     </form>
-                    <p class="card-text">This will be a fun project to do!!</p>
-                    <div class="col-md-10">
-                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card p-3">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Talk about project</h5>
-                    <form class="row g-4">
-                        <div class="col-sm-6 text-muted">
-                            <h6>Assigned To: My Team</h6>
-                        </div>
-                        <div class="col-sm-6 text-muted" style="text-align: right;">
-                            <h6>Due Date: 12/16/2022</h6>
-                        </div>
-                    </form>
-                    <p class="card-text">This will be a fun project to do!!</p>
+                    <p class="card-text" id="description">This will be a fun project to do!!</p>
                     <div class="col-md-10">
                         <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
                         <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
@@ -167,9 +129,77 @@
             </div>
         </div>
 
-        <footer>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <div class="col-md-10">
+                        <h5 class="card-title font-weight-bold" id="names">Talk about project</h5>
+                        <div class="skills html" id="status">DONE</div>
+                    </div>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6 class="mutedfield" id="assigned">Assigned To: Me</h6>
+                        </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6 class="mutedfield" id="date">Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text" id="description">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        </footer>
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <div class="col-md-10">
+                        <h5 class="card-title font-weight-bold" id="names">Talk about project</h5>
+                        <div class="skills html" id="status">DONE</div>
+                    </div>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6 class="mutedfield" id="assigned">Assigned To: Me</h6>
+                        </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6 class="mutedfield" id="date">Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text" id="description">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card p-3">
+                <div class="card-body">
+                    <div class="col-md-10">
+                        <h5 class="card-title font-weight-bold" id="names">Talk about project</h5>
+                        <div class="skills html" id="status">DONE</div>
+                    </div>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6 class="mutedfield" id="assigned">Assigned To: Me</h6>
+                        </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6 class="mutedfield" id="date">Due Date: 12/16/2022</h6>
+                        </div>
+                    </form>
+                    <p class="card-text" id="description">This will be a fun project to do!!</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

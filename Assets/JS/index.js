@@ -1,16 +1,87 @@
 /*const TaskManager = new task
 console.log(`${TaskManager.task}`)*/
 
-/*const Name = document.getElementById('inputName').value;
+const taskManager = new TaskManager();
+
+
+const names = document.getElementById('names');
 const description = document.getElementById('description');
 const assigned = document.getElementById('assigned');
 const date = document.getElementById('date');
 const errorElement = document.getElementById('error');
-let messages = [];*/
+let messages = [];
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    checkInputs();
+});
+
+function checkInputs() {
+    // get the values from the inputs
+    const namesValue = names.value;
+    const descriptionValue = description.value;
+    const assignedValue = assigned.value;
+    const dateValue = date.value;
+
+    if (namesValue === '') {
+        setErrorFor(names, 'Name cannot be empty');
+    } else {
+        setSuccesFor(names);
+    }
+    if (descriptionValue === '') {
+        setErrorFor(description, 'Description cannot be empty');
+    } else {
+        setSuccesFor(description);
+    }
+    if (assignedValue === '') {
+        setErrorFor(assigned, 'Assigned To cannot be empty');
+    } else {
+        setSuccesFor(assigned);
+    }
+    if (dateValue === '') {
+        setErrorFor(date, 'Date cannot be empty');
+    } else {
+        setSuccesFor(date);
+    }
+    if (namesValue && descriptionValue && assignedValue && dateValue) {
+        taskManager.addTask(namesValue, descriptionValue, assignedValue, dateValue);
+    } console.log(taskManager);
+    names.value = '';
+    description.value = '';
+    assigned.value = '';
+    date.value = '';
+
+}
+
+function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+    formControl.className = 'form-control error';
+    small.innerText = message;
+}
+
+function setSuccesFor(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}
+
+
+
+console.log(taskManager);
+
+
+//  const TaskManager1 = new TaskManager();
+//  TaskManager1.name = 'Felipe';
+//  TaskManager1.description = 'Hello team, we got this';
+//  console.log(TaskManager1)
+
+// Rough Draft Ideas on Task 5 Part 4 (Felipe)
 
 /* const validFormFieldInput = (data) => {
-    document.getElementById("inputName") 
-} 
+    document.getElementById("inputName")
+}
 function form () {
   console.log('test')
     if (Name === '' || null) {
@@ -30,56 +101,12 @@ $('description').alert(function() {
 
 
 // Function Starts
-const form = document.getElementById('form');
-const names = document.getElementById('names');
-const description = document.getElementById('description');
-const assigned = document.getElementById('assigned');
-const date = document.getElementById('date');
-console.log("hello");
+/*const form = document.getElementById('form');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    checkInputs();
-});
-
-function checkInputs () {
-    // get the values from the inputs
-    const namesValue = names.value;
-    const descriptionValue = description.value;
-    const assignedValue = assigned.value;
-    const dateValue = date.value;
-
-    if (namesValue === '') {
-        setErrorFor(names, 'Name cannot be empty');
-    } else {
-        setSuccesFor(names);
-    }
-    if(descriptionValue === '') {
-        setErrorFor(description, 'Description cannot be empty');
-    } else {
-        setSuccesFor(description);
-    }
-    if (assignedValue === '') {
-        setErrorFor(assigned,'Assigned To cannot be empty');
-    } else {
-        setSuccesFor(assigned);
-    }
-    if (dateValue === '') {
-        setErrorFor(date, 'Date cannot be empty');
-    } else {
-        setSuccesFor(date);
-    }
- }
-
- function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
-    formControl.className = 'form-control error';
-    small.innerText = message;
- }
-
- function setSuccesFor(input) {
-    const formControl = input.parentElement;
-    formControl.className='form-control success';
- }
+form.addEventListener('submit', function (event) {
+    event.preventDefault() // prevents the form from autosubmitting 
+    const names = document.getElementById('names').value;
+    console.log('names');
+    const description = document.getElementById('description').value;
+    const assigned = document.getElementById('assigned').value;
+    const date = document.getElementById('date').value;*/
