@@ -46,7 +46,7 @@ function checkInputs() {
         setErrorFor(date, 'Date cannot be empty');
     } else {
         setSuccesFor(date);
-    } 
+    }
     if (statusesValue === '') {
         setErrorFor(statuses, 'Status cannot be empty');
     } else {
@@ -77,6 +77,11 @@ function setSuccesFor(input) {
 
 
 console.log(taskManager);
+
+// Creating taskHTML variable
+const taskHTML = (createTaskHTML) => {
+}
+console.log(taskHTML('Generation USA', 'Final Project', 'Team 8', '12/12/2022'));
 
 
 //  const TaskManager1 = new TaskManager();
