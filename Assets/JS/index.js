@@ -1,8 +1,10 @@
 /*const TaskManager = new task
 console.log(`${TaskManager.task}`)*/
-const taskManager = new TaskManager(); // top
 
-const Name = document.getElementById('inputName');
+const taskManager = new TaskManager();
+
+
+const names = document.getElementById('names');
 const description = document.getElementById('description');
 const assigned = document.getElementById('assigned');
 const date = document.getElementById('date');
