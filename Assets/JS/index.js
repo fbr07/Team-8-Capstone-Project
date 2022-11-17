@@ -8,6 +8,7 @@ const names = document.getElementById('names');
 const description = document.getElementById('description');
 const assigned = document.getElementById('assigned');
 const date = document.getElementById('date');
+const statuses = document.getElementById('statuses');
 const errorElement = document.getElementById('error');
 let messages = [];
 
@@ -24,6 +25,7 @@ function checkInputs() {
     const descriptionValue = description.value;
     const assignedValue = assigned.value;
     const dateValue = date.value;
+    const statusesValue = statuses.value;
 
     if (namesValue === '') {
         setErrorFor(names, 'Name cannot be empty');
@@ -44,15 +46,20 @@ function checkInputs() {
         setErrorFor(date, 'Date cannot be empty');
     } else {
         setSuccesFor(date);
+    } 
+    if (statusesValue === '') {
+        setErrorFor(statuses, 'Status cannot be empty');
+    } else {
+        setSuccesFor(statuses);
     }
-    if (namesValue && descriptionValue && assignedValue && dateValue) {
-        taskManager.addTask(namesValue, descriptionValue, assignedValue, dateValue);
+    if (namesValue && descriptionValue && assignedValue && dateValue && statusesValue) {
+        taskManager.addTask(namesValue, descriptionValue, assignedValue, dateValue, statusesValue);
     } console.log(taskManager);
     names.value = '';
     description.value = '';
     assigned.value = '';
     date.value = '';
-
+    statuses.value = '';
 }
 
 function setErrorFor(input, message) {
