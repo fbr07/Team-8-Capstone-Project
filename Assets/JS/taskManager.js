@@ -47,19 +47,19 @@ class TaskManager {
         tasksHtmlList = [];
         for (let i = 0; i < this.task.length; i++) {
             let newTask = this.task[i]; // is this correct?, I created a new variable to store the current task
-            let dates = new Date(newTask.date) // in since our id is date not dueDate that is why I did this, is this correct?
-            //let formattedDate = ;//need help with this, don't understand?
-            let taskHtml = createTaskHtml(
+            let dates = new Date(newTask.date) // since our id is date not dueDate that is why I did this, is this correct?
+            let formattedDate = dates.getDate() + '/' + (dates.getMonth() + 1) + '/' + dates.getFullYear();
+            let tasksHtml = createTaskHtml(
                 newTask.names,
                 newTask.description,
                 newTask.assigned,
                 formattedDate,
                 newTask.status
             );
-            tasksHtmlList.push(taskHtml);
+            tasksHtmlList.push(tasksHtml);
         }
         let tasksHtml = tasksHtmlList.join('\n');
-        document.getElementById(/*whats our id for index.html*/).innerHTML = tasksHtml
+        document.getElementById(/*whats our id for index.html*/).innerHTML = tasksHtml  //ATTENTION!!
 
 
     }

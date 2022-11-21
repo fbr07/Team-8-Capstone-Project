@@ -60,6 +60,7 @@ function checkInputs() {
     assigned.value = '';
     date.value = '';
     statuses.value = '';
+    taskManager.render(); // is this correct, meaning where I insert it. 
 }
 
 function setErrorFor(input, message) {
@@ -78,10 +79,20 @@ function setSuccesFor(input) {
 
 console.log(taskManager);
 
-// Creating taskHTML variable
-const taskHTML = (createTaskHTML) => {
+// Creating taskHTML variable to Test your Code T6 Step 1 Test your Code
+/* const taskHTML = (createTaskHTML) => {
 }
-console.log(taskHTML('Generation USA', 'Final Project', 'Team 8', '12/12/2022'));
+console.log(taskHTML('Generation USA', 'Final Project', 'Team 8', '12/12/2022')); */
+
+
+
+
+
+
+
+
+
+
 
 
 //  const TaskManager1 = new TaskManager();
