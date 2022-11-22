@@ -14,13 +14,13 @@ const createTaskHtml = (names, description, assigned, date) => {
                         </form>
                         <p class="card-text" id="description">${description}</p>
                         <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                            <button type="button" class="btn btn-outline-success btn-md" id="mask_as_done">Mark As Done</button>
+                            <button type="button" class="btn btn-outline-danger btn-md" id="delete_button">Delete</button>
                         </div>
                     </div>
                 </div>
             </div>
-    `; // we need to figure out if we need to add statuses in here and if so where?
+    `; // we need to figure out if we need to add statuses in here and if so where from Task 6?
     return html;
 }
 
