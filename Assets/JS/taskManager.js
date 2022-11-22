@@ -1,26 +1,29 @@
-const createTaskHtml = (names, description, assigned, date) => {
+const createTaskHtml = (names, description, assigned, date,statuses) => {
     const html = ` 
         <div class="col-6">
-                <div class="card p-3">
-                    <div class="card-body">
+            <div class="card p-3">
+                <div class="card-body">
+                    <div class="col-md-10">
                         <h5 class="card-title font-weight-bold" id="names">${names}</h5>
-                        <form class="row g-4">
-                            <div class="col-sm-6 text-muted">
-                                <h6 id="assigned">Assigned To: ${assigned}</h6>
-                            </div>
-                            <div class="col-sm-6 text-muted" style="text-align: right;">
-                                <h6 id="date">Due Date: ${date}</h6>
-                            </div>
-                        </form>
-                        <p class="card-text" id="description">${description}</p>
-                        <div class="col-md-10">
-                            <button type="button" class="btn btn-outline-success btn-md" id="mask_as_done">Mark As Done</button>
-                            <button type="button" class="btn btn-outline-danger btn-md" id="delete_button">Delete</button>
+                        <div class="skills html" id="status">${statuses}es</div>
+                    </div>
+                    <form class="row g-4">
+                        <div class="col-sm-6 text-muted">
+                            <h6 class="mutedfield" id="assigned">Assigned To: ${assigned} </h6>
                         </div>
+                        <div class="col-sm-6 text-muted" style="text-align: right;">
+                            <h6 class="mutedfield" id="date">Due Date: ${date}</h6>
+                        </div>
+                    </form>
+                    <p class="card-text" id="description">${description}</p>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
                     </div>
                 </div>
             </div>
-    `; // we need to figure out if we need to add statuses in here and if so where from Task 6?
+        </div>
+    `; 
     return html;
 }
 
@@ -37,7 +40,7 @@ class TaskManager {
             assigned: assigned,
             date: date,
             id: this.currentId++,
-            status: 'TODO', //should this be statuses since that is what we have for our id?
+            statuses: 'TODO', 
         };
 
         this.task.push(newTask);
@@ -54,12 +57,12 @@ class TaskManager {
                 newTask.description,
                 newTask.assigned,
                 formattedDate,
-                newTask.status
+                newTask.statuses
             );
             tasksHtmlList.push(tasksHtml);
         }
         let tasksHtml = tasksHtmlList.join('\n');
-        document.getElementById(/*whats our id for index.html*/).innerHTML = tasksHtml  //ATTENTION!!
+        document.getElementById('tasksList').innerHTML = tasksHtml 
 
 
     }
