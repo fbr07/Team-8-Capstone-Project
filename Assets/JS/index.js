@@ -75,6 +75,14 @@ function setSuccesFor(input) {
     formControl.className = 'form-control success';
 }
 
+const tasks_List = document.getElementById('tasksList');
+
+tasksList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('done-button')) {
+        let parentTask =  e.target.parentElement
+    }
+})
+
 
 
 console.log(taskManager);

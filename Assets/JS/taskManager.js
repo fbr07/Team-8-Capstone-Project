@@ -17,8 +17,8 @@ const createTaskHtml = (names, description, assigned, date,statuses) => {
                     </form>
                     <p class="card-text" id="description">${description}</p>
                     <div class="col-md-10">
-                        <button type="button" class="btn btn-outline-success btn-md">Mark As Done</button>
-                        <button type="button" class="btn btn-outline-danger btn-md">Delete</button>
+                        <button type="button" class="btn btn-outline-success btn-md" id='done-button'>Mark As Done</button>
+                        <button type="button" class="btn btn-outline-danger btn-md" id="delete-button">Delete</button>
                     </div>
                 </div>
             </div>
