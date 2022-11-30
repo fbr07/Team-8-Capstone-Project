@@ -75,17 +75,23 @@ function setSuccesFor(input) {
     formControl.className = 'form-control success';
 }
 
-const tasks_List = document.getElementById('tasksList');
+const tasks_List = document.querySelector('#tasksList');
 
-tasksList.addEventListener('click', (e) => {
+tasks_List.addEventListener('click', (e) => {
     if (e.target.classList.contains('done-button')) {
-        let parentTask =  e.target.parentElement
+        let parentTask =  e.target.parentElement.parentElement
+        console.log(parentTask);
+    let taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    let task = taskManager.getTaskById(taskId);
+    task.statuses = 'Done'
+    console.log(taskManager); // I added this console so we can see when we click Mark as Done
+    taskManager.render(); // how come this render is different from the render in line 63
     }
 })
 
 
 
-console.log(taskManager);
 
 
 

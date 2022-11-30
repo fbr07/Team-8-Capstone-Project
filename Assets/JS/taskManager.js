@@ -1,8 +1,8 @@
-const createTaskHtml = (names, description, assigned, date,statuses) => {
+const createTaskHtml = (id, names, description, assigned, date,statuses) => {
     const html = ` 
         <div class="col-6">
             <div class="card p-3">
-                <div class="card-body">
+                <div class="card-body" data-task-id=${id}>
                     <div class="col-md-10">
                         <h5 class="card-title font-weight-bold" id="names">${names}</h5>
                         <div class="skills html" id="status">${statuses}es</div>
@@ -17,7 +17,7 @@ const createTaskHtml = (names, description, assigned, date,statuses) => {
                     </form>
                     <p class="card-text" id="description">${description}</p>
                     <div class="col-md-10">
-                        <button type="button" class="btn btn-outline-success btn-md" id='done-button'>Mark As Done</button>
+                        <button type="button" class="btn btn-outline-success btn-md done-button" id='done-button'>Mark As Done</button>
                         <button type="button" class="btn btn-outline-danger btn-md" id="delete-button">Delete</button>
                     </div>
                 </div>
@@ -29,30 +29,31 @@ const createTaskHtml = (names, description, assigned, date,statuses) => {
 
 class TaskManager {
     constructor(currentId = 0) {
-        this.task = []
+        this.tasks = []
         this.currentId = currentId
     }
 
     addTask(names, description, assigned, date,) {
         let newTask = {
+            id: this.currentId++,
             names: names,
             description: description,
             assigned: assigned,
             date: date,
-            id: this.currentId++,
             statuses: 'TODO', 
         };
 
-        this.task.push(newTask);
+        this.tasks.push(newTask);
     }
 
     render() {
-        tasksHtmlList = [];
-        for (let i = 0; i < this.task.length; i++) {
-            let newTask = this.task[i]; // is this correct?, I created a new variable to store the current task
+        let tasksHtmlList = [];
+        for (let i = 0; i < this.tasks.length; i++) {
+            let newTask = this.tasks[i]; // is this correct?, I created a new variable to store the current task
             let dates = new Date(newTask.date) // since our id is date not dueDate that is why I did this, is this correct?
             let formattedDate = dates.getDate() + '/' + (dates.getMonth() + 1) + '/' + dates.getFullYear();
             let tasksHtml = createTaskHtml(
+                newTask.id,
                 newTask.names,
                 newTask.description,
                 newTask.assigned,
@@ -62,9 +63,17 @@ class TaskManager {
             tasksHtmlList.push(tasksHtml);
         }
         let tasksHtml = tasksHtmlList.join('\n');
-        document.getElementById('tasksList').innerHTML = tasksHtml 
-
-
+        document.getElementById('tasksList').innerHTML = tasksHtml
+    }
+    getTaskById(taskId) {
+        let foundTask;
+        for (let i = 0; i < this.tasks.length; i++) {
+            let task = this.tasks[i];
+            if (taskId == task.id) {
+                foundTask = task;
+            }
+        }
+        return foundTask
     }
 
 }
