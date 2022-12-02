@@ -47,7 +47,7 @@ class TaskManager {
     }
 
     render() {
-        let tasksHtmlList = [];
+        const tasksHtmlList = [];
         for (let i = 0; i < this.tasks.length; i++) {
             let newTask = this.tasks[i]; // is this correct?, I created a new variable to store the current task
             let dates = new Date(newTask.date) // since our id is date not dueDate that is why I did this, is this correct?
@@ -64,6 +64,22 @@ class TaskManager {
         }
         let tasksHtml = tasksHtmlList.join('\n');
         document.getElementById('tasksList').innerHTML = tasksHtml
+    }
+    save() {
+        const tasksJson = JSON.stringify(this.tasks);
+            localStorage.setItem('tasks',tasksJson)
+            const currentId = this.currentId.toString();
+            localStorage.setItem('currentId',currentId)
+    }
+    load() {
+        if (localStorage.getItem('tasks')) {
+            const tasksJson = localStorage.getItem('tasks');
+            this.tasks = JSON.parse(tasksJson);
+        }
+        if (localStorage.getItem('currentId')) {
+            const currentId = localStorage.getItem('currentId')
+            this.currentId = parseInt(currentId);
+        }
     }
     getTaskById(taskId) {
         let foundTask;
@@ -118,3 +134,6 @@ class TaskManager {
 // console.log(this.task)
 
 
+/* Questions:
+        Tas 8 Results - This only works when the Tasks are added and mark as done. Should it be for all the tasks that we add?
+        */
