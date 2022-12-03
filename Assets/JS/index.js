@@ -82,14 +82,23 @@ const tasks_List = document.querySelector('#tasksList');
 tasks_List.addEventListener('click', (e) => {
     if (e.target.classList.contains('done-button')) {
         let parentTask =  e.target.parentElement.parentElement
-        //console.log(parentTask);
+        console.log(parentTask);
     let taskId = Number(parentTask.dataset.taskId);
-    console.log(taskId);
+    console.log(taskId); // adding this line to check
     let task = taskManager.getTaskById(taskId);
     task.statuses = 'Done'
     console.log(taskManager); // I added this console so we can see when we click Mark as Done
     taskManager.save();
     taskManager.render(); // how come this render is different from the render in line 63
+    }
+    if (e.target.classList.contains('delete-button')) {
+        let parentTask = e.target.parentElement.parentElement
+        console.log(parentTask); // adding this line to check
+    let taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId); // adding this line to check
+    taskManager.deleteTask(taskId);
+    taskManager.save();
+    taskManager.render();
     }
 })
 

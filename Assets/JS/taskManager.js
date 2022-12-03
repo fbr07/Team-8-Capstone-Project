@@ -1,4 +1,4 @@
-const createTaskHtml = (id, names, description, assigned, date,statuses) => {
+const createTaskHtml = (id, names, description, assigned, date, statuses) => {
     const html = ` 
         <div class="col-6">
             <div class="card p-3">
@@ -23,7 +23,7 @@ const createTaskHtml = (id, names, description, assigned, date,statuses) => {
                 </div>
             </div>
         </div>
-    `; 
+    `;
     return html;
 }
 
@@ -34,13 +34,13 @@ class TaskManager {
     }
 
     addTask(names, description, assigned, date,) {
-        let newTask = {
+        const newTask = {
             id: this.currentId++,
             names: names,
             description: description,
             assigned: assigned,
             date: date,
-            statuses: 'TODO', 
+            statuses: 'TODO',
         };
 
         this.tasks.push(newTask);
@@ -67,9 +67,9 @@ class TaskManager {
     }
     save() {
         const tasksJson = JSON.stringify(this.tasks);
-            localStorage.setItem('tasks',tasksJson)
-            const currentId = this.currentId.toString();
-            localStorage.setItem('currentId',currentId)
+        localStorage.setItem('tasks', tasksJson)
+        const currentId = this.currentId.toString();
+        localStorage.setItem('currentId', currentId)
     }
     load() {
         if (localStorage.getItem('tasks')) {
@@ -90,6 +90,16 @@ class TaskManager {
             }
         }
         return foundTask
+    }
+    deleteTask(taskId) {
+        const newTasks = [];
+        for(let i = 0; i < this.tasks.length; i++) {
+            const task = this.tasks[i];
+            if(task.id !== taskId) {
+                newTasks.push(task);
+            }
+        }
+        this.tasks = newTasks;
     }
 
 }
