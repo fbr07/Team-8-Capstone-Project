@@ -5,7 +5,7 @@ const createTaskHtml = (id, names, description, assigned, date, statuses) => {
                 <div class="card-body" data-task-id=${id}>
                     <div class="col-md-10">
                         <h5 class="card-title font-weight-bold" id="names">${names}</h5>
-                        <div class="skills html" id="status">${statuses}es</div>
+                        <div class="skills html" id="status">${statuses}</div>
                     </div>
                     <form class="row g-4">
                         <div class="col-sm-6 text-muted">
@@ -17,8 +17,8 @@ const createTaskHtml = (id, names, description, assigned, date, statuses) => {
                     </form>
                     <p class="card-text" id="description">${description}</p>
                     <div class="col-md-10">
-                        <button type="button" class="btn btn-outline-success btn-md done-button" id='done-button'>Mark As Done</button>
-                        <button type="button" class="btn btn-outline-danger btn-md" id="delete-button">Delete</button>
+                        ${statuses === "TODO" ? '<button type="button" class="btn btn-outline-success btn-md done-button" id="done-button">Mark As Done</button>':""} 
+                        <button type="button" class="btn btn-outline-danger btn-md delete-button" id="delete-button">Delete</button>
                     </div>
                 </div>
             </div>
