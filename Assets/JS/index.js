@@ -1,6 +1,3 @@
-/*const TaskManager = new task
-console.log(`${TaskManager.task}`)*/
-
 const taskManager = new TaskManager();
 taskManager.load();
 taskManager.render();
@@ -62,7 +59,7 @@ function checkInputs() {
     assigned.value = '';
     date.value = '';
     statuses.value = '';
-    taskManager.render(); // is this correct, meaning where I insert it. 
+    taskManager.render(); 
 }
 
 function setErrorFor(input, message) {
@@ -102,62 +99,3 @@ tasks_List.addEventListener('click', (e) => {
     }
 })
 
-
-
-
-
-
-// Creating taskHTML variable to Test your Code T6 Step 1 Test your Code
-/* const taskHTML = (createTaskHTML) => {
-}
-console.log(taskHTML('Generation USA', 'Final Project', 'Team 8', '12/12/2022')); */
-
-
-
-
-
-
-
-
-
-
-
-
-//  const TaskManager1 = new TaskManager();
-//  TaskManager1.name = 'Felipe';
-//  TaskManager1.description = 'Hello team, we got this';
-//  console.log(TaskManager1)
-
-// Rough Draft Ideas on Task 5 Part 4 (Felipe)
-
-/* const validFormFieldInput = (data) => {
-    document.getElementById("inputName")
-}
-function form () {
-  console.log('test')
-    if (Name === '' || null) {
-        alert('Name is required')
-    }
-  // else if (description.value.length <= 5) {
-  //      alert('Description must be longer than 5 characters')
- //   }
-
-  //  if (messages.length > 0) {
-//        e.preventDefault()
-    //    errorElement.innerText = messages.join(', ')
-   // }
-$('description').alert(function() {
-    alert("The Form has been Submitted.");
- });*/
-
-
-// Function Starts
-/*const form = document.getElementById('form');
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault() // prevents the form from autosubmitting 
-    const names = document.getElementById('names').value;
-    console.log('names');
-    const description = document.getElementById('description').value;
-    const assigned = document.getElementById('assigned').value;
-    const date = document.getElementById('date').value;*/

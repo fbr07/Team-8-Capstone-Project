@@ -49,8 +49,8 @@ class TaskManager {
     render() {
         const tasksHtmlList = [];
         for (let i = 0; i < this.tasks.length; i++) {
-            let newTask = this.tasks[i]; // is this correct?, I created a new variable to store the current task
-            let dates = new Date(newTask.date) // since our id is date not dueDate that is why I did this, is this correct?
+            let newTask = this.tasks[i]; 
+            let dates = new Date(newTask.date) 
             let formattedDate = dates.getDate() + '/' + (dates.getMonth() + 1) + '/' + dates.getFullYear();
             let tasksHtml = createTaskHtml(
                 newTask.id,
@@ -103,47 +103,3 @@ class TaskManager {
     }
 
 }
-
-
-
-
-
-
-
- // get names(){
-    //     return this.names
-    // }
-    // get description(){
-    //     return this.description
-    // }
-    // get assigned(){
-    //     return this.assigned
-    // }
-    // get date(){
-    //     return this.date
-    // }
-    // get id(){
-    //     return this.id
-    // }
-
-
-//     this.task.push(names);
-    //     this.task.push(description);
-    //     this.task.push(assigned);
-    //     this.task.push(date);
-    //     this.task.push(id);
-
-    // }
-
-
-// console.log(TaskManager.date);
-
-
-// addTask.push('names');
-// this.task.push('names', 'description', 'assigned', 'date', 'currentId')
-// console.log(this.task)
-
-
-/* Questions:
-        Tas 8 Results - This only works when the Tasks are added and mark as done. Should it be for all the tasks that we add?
-        */
