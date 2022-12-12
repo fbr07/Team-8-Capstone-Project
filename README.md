@@ -7,7 +7,7 @@ To-Do List website made with my teammates in the Generation USA program!
 
 ### Collaborators
 
-Michele Baldwin, Aubrie McClendon, & Felipe Bajaras Rangel
+[Michele Baldwin](https://github.com/msbaldwin), [Aubrie McClendon](https://github.com/anm064), & [Felipe Bajaras Rangel](https://github.com/fbr07)
 
 
 ## Table of Contents
