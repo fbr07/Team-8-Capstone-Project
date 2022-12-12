@@ -3,11 +3,11 @@
 
 
 
-Website made with my team to create a list of To-Do Task Cards!
+To-Do List website made with my teammates in the Generation USA program!
 
 ### Collaborators
 
-Michele Baldwin, Aubrie McClendon, Felipe Bajaras Rangel
+Michele Baldwin, Aubrie McClendon, & Felipe Bajaras Rangel
 
 
 ## Table of Contents
@@ -22,7 +22,7 @@ Michele Baldwin, Aubrie McClendon, Felipe Bajaras Rangel
 
 ## Description
 
-This is a website to allow users to create and update their todo task cards. The user is able to set the status of their task card, and once they are finish their card, they can delete it and remove the card freely from their dashboard
+This is a website to allow users to create and update their todo task cards. In the form section, the user is able to fill out the required information to populate a task card. In the task card(s) section, once the user completes their task, the user can mark the task card as done, delete it, and remove the card from their dashboard.
 
 <img width="1644" alt="Screen Shot 2022-12-08 at 6 32 46 PM" src="https://user-images.githubusercontent.com/47063822/206589008-8ade68c5-fbda-4897-8bc7-0025151c72c8.png">
 
@@ -44,18 +44,18 @@ no commands for testing
 
 ## Contribute
 
-fork the repository to contribute freely
+fork the repository to edit the website freely
 
 ## Questions?
 
 Please feel free to contact me with any questions via email or LinkedIn.
 
-- Github: [deniselewis](https://github.com/deniselewis)
-- LinkedIn: [Denise Lewis](https://www.linkedin.com/in/deniselewis12/)
-- Email: [denisepl28@gmail.com](mailto:denisepl28@gmail.com)
+- Github: [deniselewis](https://github.com/deniselewis), [msbaldwin](https://github.com/msbaldwin), [anm064](https://github.com/anm064), [fbr07](https://github.com/fbr07)
+- LinkedIn: [Denise Lewis](https://www.linkedin.com/in/deniselewis12/), [Michele Baldwin](https://www.linkedin.com/in/michele-baldwin26/), [Aubrie McClendon](https://www.linkedin.com/in/aubrie-mcclendon-985706248/), [Felipe Barajas Rangel](https://www.linkedin.com/in/felipe-barajas/)
+- Email: [denisepl28@gmail.com](mailto:denisepl28@gmail.com), [mihsantos.26@gmail.com](mailto:mihsantos.26@gmail.com), [aubriem2@gmail.com](mailto:aubriem2@gmail.com), [fbrangel27@gmail.com](mailto:fbrangel27@gmail.com)
 
 ## License
 
 
 
-&copy; 2022 Denise Lewis
+&copy; 2022 Denise Lewis, Michele Baldwin, Aubrie McClendon, & Felipe Bajaras Rangel
