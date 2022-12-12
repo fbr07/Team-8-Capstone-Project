@@ -84,9 +84,9 @@ tasks_List.addEventListener('click', (e) => {
     console.log(taskId); // adding this line to check
     let task = taskManager.getTaskById(taskId);
     task.statuses = 'Done'
-    console.log(taskManager); // I added this console so we can see when we click Mark as Done
+    console.log(taskManager); 
     taskManager.save();
-    taskManager.render(); // how come this render is different from the render in line 63
+    taskManager.render(); 
     }
     if (e.target.classList.contains('delete-button')) {
         let parentTask = e.target.parentElement.parentElement
